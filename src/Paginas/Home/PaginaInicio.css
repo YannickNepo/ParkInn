@@ -1,0 +1,37 @@
+.Logo {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    }
+
+.BotonR-I {
+    height: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.BotonR-I button{
+    height: 70px;
+    padding: 10px 15px;
+    margin: 4px 2px;
+    width: 200px;
+}
+
+#btn_r{
+    background-color:rgba(55, 212, 246, 1);
+}
+
+#btn_is{
+    background-color:white;
+    border: 2px solid 1799B6;
+}
+
+.Home{
+    height: 100%;
+}
