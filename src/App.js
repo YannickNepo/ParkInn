@@ -5,7 +5,7 @@ import PaginaInicio from './Paginas/Home/PaginaInicio'
 
 function App() {
   return (
-    <div className="App" >       
+    <div >       
       <PaginaInicio />
     </div>
   );
