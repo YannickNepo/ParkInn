@@ -1,26 +1,37 @@
 import React from 'react';
 import './PaginaInicio.css';
 import logo from '../../assets/LOGO.png';
-import Botones from '../../components/Botones';
+import { useNavigate } from 'react-router-dom';
 
-function Logo() {
+function Home() {
+  const history = useNavigate();
+  const redirectToLogin = () => {
+    history('/Login');
+  };
+  const redirectToRegister= () => {
+    history('/Registrarse');
+  };
+
   return (
-    <div className="Logo" >
+   
+    <div className='Home'>
+      <div className="Logo" >
       <img src={logo} alt="LogoPark" />
+     </div>
+      <div className='BotonR-I'>
+        <button type="button" className="btn_r" onClick={redirectToRegister}>
+        Crear cuenta
+        </button>
+        <button type="button" className="btn_is" onClick={redirectToLogin}>
+        Iniciar Sesion
+        </button>
+      </div>
     </div>
   );
 }
 
-function Home(){
-  return(
-    <div className="Home">
-      <Logo /> 
-      <Botones />
-    </div> 
-  )
-}
 
-export default Home;
+  export default Home;
 
 
 
