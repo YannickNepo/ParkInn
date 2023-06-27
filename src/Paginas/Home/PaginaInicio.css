@@ -23,6 +23,7 @@
     margin: 2px 1px;
     width: 200px;
     background-color: rgba(40, 123, 144, 1);
+    color: white;
     
  }
  
@@ -32,7 +33,7 @@
     
 }
 #btn_is{
-    background-color: blue;
+    color: #287B90;
     
 }
 
