@@ -15,13 +15,10 @@ export default function LoginPage(){
       <div className='info'>
        
         <h1 className='titulo'>INICIO DE SESIÓN
-          <hr className='barra-abajo'></hr>
         </h1>
         <div className='contenedor-texto-login'>
           <input className='input-login'type='text' placeholder="Nombre de usuario"></input>
-          <hr className='barra-input'></hr>
           <input className='input-login'type='password' placeholder="Contraseña"></input>
-          <hr className='barra-input'></hr>
           <h5>No tienes cuenta? <Link to="/register">Registrate</Link></h5>
         </div>
         <button type="button" className="boton" onClick={redirectToAnotherRoute}>

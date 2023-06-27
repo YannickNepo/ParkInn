@@ -18,17 +18,14 @@ export default function RegisterPage(){
         </h1>
         <div className='contenedor-texto-login'>
             <input className='input-login' type='text' placeholder="Nombre de usuario"></input>
-          <hr className='barra-input'></hr>
           <input className='input-login' type='mail' placeholder="Email"></input>
-          <hr className='barra-input'></hr>
           <div>
             <input className='input-login' type='password' placeholder="Contraseña"></input> 
           </div>
-          <hr className='barra-input'></hr>
           <h5>Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></h5>   
         </div>
         <button type="button" className="boton" onClick={redirectToAnotherRoute}>
-          <p className="boton-texto">&nbsp;&nbsp;REGISTRARSE</p>
+          <p className="boton-texto">REGISTRARSE</p>
         </button>
        </div>
      </div>

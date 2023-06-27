@@ -4,34 +4,34 @@
     
     }
 
-.BotonR-I {
+.BotonR-I button{
     height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; 
-    
- }
-
- .BotonR-I button{
+    gap: 20px; 
+    border-radius: 10px;
     height: 40px;
     padding: 10px 15px;
     margin: 2px 1px;
     width: 200px;
+    background-color: rgba(40, 123, 144, 1);
     
-}
+ }
+ 
 
 #btn_r{
-    border: 0ch;    
+    background-color: white;   
     
 }
 #btn_is{
-    border: 0ch;
+    background-color: blue;
     
 }
 
 
 
 .Home{
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
 }
