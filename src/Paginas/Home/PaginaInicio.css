@@ -1,14 +1,14 @@
 .Logo {
-    display: flex;
-    align-items: center;
+    position: relative;
+    top: 160px;
+    left: 60px;
     
 }
 
 .BotonR-I{
-    gap: 50px;
     position: absolute;
-    top: 300px;
-    left: 100px;
+    top: 330px;
+    left: 90px;
 }
 
 
@@ -20,8 +20,8 @@
     border-radius: 10px;
     height: 40px;
     padding: 10px 15px;
-    margin: 2px 1px;
-    width: 200px;
+    margin: 30px 1px;
+    width: 230px;
     background-color: rgba(40, 123, 144, 1);
     color: white;
     

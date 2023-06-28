@@ -14,7 +14,6 @@
     
 }
 .info{
-    width: 100vh;
     font-size: 100%;
     line-height: 50px;
     font-weight: bold;
@@ -23,6 +22,11 @@
 
 .contenedor-texto-login{
     margin-top: 15%;
+    width: 260px;
+    height: 100vh;
+    position: Absolute;
+    top: 180px;
+    left: 70px;
 }
 .input-login{
     width: 80%;
@@ -44,5 +48,7 @@
     margin-left: 50%;
     margin-right: 50%;
     transform: translate(-50%, -50%);
+    position: absolute;
+    top: 385px;
 }
 

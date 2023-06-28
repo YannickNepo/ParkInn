@@ -1,25 +1,32 @@
 .contenedor-login{
     font-size: 20px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;   
+    height: 100vh;   
 }
 
-.titulo{
-    font-weight: 400;
+.tituloR{
+    font-weight: 38;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px black;
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    margin-top: 15%;
+    font-weight: 38px;
+    text-align: center;
+    color: white;
 }
 .info{
-    width: 100%;
+    width: 100vh;
     font-size: 100%;
     line-height: 50px;
     font-weight: bold;
 }
 
-.contenedor-texto-login{
+.contenedor-texto-Registrarse{
     margin-top: 15%;
+    position: absolute;
+    top: 150px;
+    left: 70px;
 }
 .input-login{
     margin: auto;
@@ -48,14 +55,3 @@
     transform: translate(-50%, -50%);
 }
 
-
-
-
-.barra-input{
-    width: 80%;
-    height: 1px;
-    background-color: black;
-    border: black;
-    margin-top: -2%;
-    float: left;
-}

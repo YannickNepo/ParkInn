@@ -14,9 +14,9 @@ export default function RegisterPage(){
   return(
     <div className='contenedor-login'>
       <div className='info'>
-        <h1 className='titulo'>Crear cuenta
+        <h1 className='tituloR'>Crear cuenta
         </h1>
-        <div className='contenedor-texto-login'>
+        <div className='contenedor-texto-Registrarse'>
             <input className='input-login' type='text' placeholder="Nombre de usuario"></input>
           <input className='input-login' type='mail' placeholder="Email"></input>
           <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './PaginaInicio.css';
-import logo from '../../assets/LOGO.png';
+import logo from '../../assets/proyecto.png';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
