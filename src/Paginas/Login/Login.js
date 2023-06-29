@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage(){
+
+
   const loginData = {
-    username: 'nombreDeUsuario',
-    password: 'contraseña',
+    username: 'chona',
+    password: 'chona123',
   };
   
   fetch('http://localhost:3000/Login', {

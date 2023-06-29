@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 export default function RegisterPage(){
 
   const registroData = {
-    username: 'nombreDeUsuario',
-    email: 'correo@example.com',
-    password: 'contraseña',
+    username: 'chona',
+    email: 'chona@gmail.com',
+    password: 'chona',
   };
   
   fetch('http://localhost:3000/Registrarse', {
