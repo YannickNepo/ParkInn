@@ -7,12 +7,14 @@ import Registrarse from './Paginas/Registrarse/Registrarse'
 
 
 function App() {
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<PaginaInicio />} />
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/vacio" element={<vacio />} />
       </Routes>
     </Router> 
   );

@@ -5,10 +5,43 @@ import { useNavigate } from 'react-router-dom';
 
 export default function RegisterPage(){
 
+  const registroData = {
+    username: 'nombreDeUsuario',
+    email: 'correo@example.com',
+    password: 'contraseña',
+  };
+  
+  fetch('http://localhost:3000/Registrarse', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(registroData),
+  })
+    .then(response => {
+      if (response.ok) {
+        // Registro exitoso
+        return response.json();
+      } else {
+        throw new Error('Error en el registro');
+      }
+    })
+    .then(data => {
+      // Manejar la respuesta del registro
+      console.log(data);
+    })
+    .catch(error => {
+      // Manejar errores del registro
+      console.error(error);
+    });
+
+
+
+
   const history = useNavigate();
 
-  const redirectToAnotherRoute = () => {
-    history('/');
+  const redirectToLogin = () => {
+    history('/Login');
   };
 
   return(
@@ -24,8 +57,8 @@ export default function RegisterPage(){
           </div>
           <h5>Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></h5>   
         </div>
-        <button type="button" className="boton" onClick={redirectToAnotherRoute}>
-          <p className="boton-texto">REGISTRARSE</p>
+        <button type="button" className="boton" onClick={redirectToLogin}>
+          <p className="boton-texto">&nbsp;REGISTRARSE</p>
         </button>
        </div>
      </div>
