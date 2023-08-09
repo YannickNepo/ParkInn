@@ -4,6 +4,7 @@ import PaginaInicio from './Paginas/Home/PaginaInicio'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Paginas/Login/Login'
 import Registrarse from './Paginas/Registrarse/Registrarse'
+import MenuInicio from './Paginas/MenuInicio/MenuInicio'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<PaginaInicio />} />
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/vacio" element={<vacio />} />
+        <Route path="/menuInicio" element={<MenuInicio />} />
       </Routes>
     </Router> 
   );

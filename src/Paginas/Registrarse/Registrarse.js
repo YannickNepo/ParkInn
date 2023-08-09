@@ -4,40 +4,6 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function RegisterPage(){
-
-  const registroData = {
-    username: 'chona',
-    email: 'chona@gmail.com',
-    password: 'chona',
-  };
-  
-  fetch('http://localhost:3000/Registrarse', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(registroData),
-  })
-    .then(response => {
-      if (response.ok) {
-        // Registro exitoso
-        return response.json();
-      } else {
-        throw new Error('Error en el registro');
-      }
-    })
-    .then(data => {
-      // Manejar la respuesta del registro
-      console.log(data);
-    })
-    .catch(error => {
-      // Manejar errores del registro
-      console.error(error);
-    });
-
-
-
-
   const history = useNavigate();
 
   const redirectToLogin = () => {

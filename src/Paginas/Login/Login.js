@@ -4,41 +4,10 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage(){
-
-
-  const loginData = {
-    username: 'chona',
-    password: 'chona123',
-  };
-  
-  fetch('http://localhost:3000/Login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(loginData),
-  })
-    .then(response => {
-      if (response.ok) {
-        // Inicio de sesión exitoso
-        return response.json();
-      } else {
-        throw new Error('Error en el inicio de sesión');
-      }
-    })
-    .then(data => {
-      // Manejar la respuesta del inicio de sesión
-      console.log(data);
-    })
-    .catch(error => {
-      // Manejar errores del inicio de sesión
-      console.error(error);
-    });
-
   const history = useNavigate();
 
   const redirectToAnotherRoute = () => {
-    history('/vacio');
+    history('/MenuInicio');
   };
 
   return(
