@@ -22,7 +22,7 @@
     top: 150px;
     left: 70px;
 }
-.input-login{
+.input-login1{
     margin: auto;
     width: 70%;
     font-size: 20px;
@@ -32,7 +32,24 @@
     gap: 10px;
 
 }
-
+.input-login2{
+    margin: auto;
+    width: 70%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+}
+.input-login3{
+    margin: auto;
+    width: 70%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+}
 .boton{
     margin-top: 70px;
     display: flex;
