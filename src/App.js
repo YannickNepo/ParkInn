@@ -16,6 +16,7 @@ function App() {
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/login" element={<Login />} />
         <Route path="/menuInicio" element={<MenuInicio />} />
+        <Route path="/menuInicio" element={<MiPerfil />} />
       </Routes>
     </Router> 
   );
