@@ -6,9 +6,15 @@ import BtnMP from '../../assets/MiPerfil.PNG';
 import { useNavigate } from 'react-router-dom';
 
 export default function MenIni(){
-   const history = useNavigate();
-   const redirectToMiPerfil = () => {
-     history('/MiPerfil');
+  const history = useNavigate();
+  const redirectToBuscaEstacionamiento = () => {
+    history('/BuscaEstacionamiento');
+  };
+  const redirectToPublicaEstacionamiento = () => {
+    history('/PublicaEstacionamiento');
+  };
+  const redirectToMiPerfil = () => {
+    history('/MiPerfil');
   };
    
 
@@ -16,12 +22,12 @@ export default function MenIni(){
   return(
     <div className='MenI'>
       <div className="BuscaEstacionamiento" >
-      <button type="button" className="btn_BE" onClick={redirectToMiPerfil}>
+      <button type="button" className="btn_BE" onClick={redirectToBuscaEstacionamiento}>
       <img src={BtnBE} alt="BotonBuscaEstacionamiento" />
       </button>
       </div>
       <div className="PublicaEstacionamiento" >
-      <button type="button" className="btn_PE" onClick={redirectToMiPerfil}>
+      <button type="button" className="btn_PE" onClick={redirectToPublicaEstacionamiento}>
       <img src={BtnPE} alt="BotonPublicaEstacionamiento" />
       </button>
      </div>
