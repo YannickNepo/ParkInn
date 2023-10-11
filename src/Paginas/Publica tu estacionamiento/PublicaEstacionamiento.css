@@ -1,0 +1,62 @@
+.contenedor-PE{
+    font-size: 20px;
+    height: 100vh;   
+}
+
+.tituloPE{
+    margin-top: 15%;
+    font-weight: 38px;
+    text-align: center;
+    color: red;
+    position: absolute;
+}
+.info{
+    width: 100vh;
+    font-size: 100%;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.contenedor-texto-PE{
+    margin-top: 15%;
+    position: absolute;
+    top: 150px;
+    left: 70px;
+}
+.input-Direccion{
+    margin: auto;
+    width: 80%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+    margin: 30px;
+
+}
+.input-Barrio{
+    margin: auto;
+    width: 80%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+    margin: 30px;
+}
+.input-referencia{
+    margin: auto;
+    width: 80%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+    margin: 30px;
+}
+.Logo {
+    position: relative;
+    top: 25px;
+    left: 60px;
+    
+}
