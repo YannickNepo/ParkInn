@@ -11,15 +11,15 @@ export default function RegisterPage(){
   };
 
   return(
-    <div className='contenedor-login'>
+    <div className='contenedor-registrarse'>
       <div className='info'>
         <h1 className='tituloR'>Crear cuenta
         </h1>
         <div className='contenedor-texto-Registrarse'>
-            <input className='input-login1' type='text' placeholder="Nombre de usuario"></input>
-          <input className='input-login2' type='mail' placeholder="Email"></input>
+            <input className='input-registrarse1' type='text' placeholder="Nombre de usuario"></input>
+          <input className='input-registrarse2' type='mail' placeholder="Email"></input>
           <div>
-            <input className='input-login3' type='password' placeholder="Contraseña"></input> 
+            <input className='input-registrarse3' type='password' placeholder="Contraseña"></input> 
           </div>
           <h5>Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></h5>   
         </div>

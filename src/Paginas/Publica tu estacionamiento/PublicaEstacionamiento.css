@@ -20,7 +20,7 @@
 .contenedor-texto-PE{
     margin-top: 15%;
     position: absolute;
-    top: 150px;
+    top: 230px;
     left: 70px;
 }
 .input-Direccion{
@@ -54,7 +54,7 @@
     gap: 10px;
     margin: 30px;
 }
-.Logo {
+.LogoPE {
     position: relative;
     top: 25px;
     left: 60px;

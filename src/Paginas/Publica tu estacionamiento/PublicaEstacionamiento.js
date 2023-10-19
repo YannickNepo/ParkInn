@@ -12,7 +12,7 @@ export default function PublicaEstacionamiento(){
 
   return(
     <div className='contenedor-PE'>
-      <div className="Logo" >
+      <div className="LogoPE" >
       <button type="button" className="btn_logo" onClick={redirectToMenuInicio}>
       <img src={logo} alt="Botonlogo" />
       </button>

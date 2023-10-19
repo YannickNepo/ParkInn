@@ -6,32 +6,43 @@
     background-color: #496EA6;
 }
 
-.titulo{
-    margin-top: 15%;
+.tituloL{
+    margin-top: 45%;
     font-weight: 38px;
     text-align: center;
     color: white;
     
 }
 .info{
+    width: 100vh;
     font-size: 100%;
     line-height: 50px;
     font-weight: bold;
-
 }
-
-.contenedor-texto-login{
-    margin-top: 15%;
-    width: 260px;
-    height: 100vh;
-    position: Absolute;
-    top: 180px;
+.contenedor-texto-Login{
+    margin-top: 35%;
+    position: absolute;
+    top: 150px;
     left: 70px;
 }
-.input-login{
-    width: 80%;
+
+.input-login1 {
+    margin: auto;
+    width: 70%;
     font-size: 20px;
-    border-radius: 4px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
+}
+.input-login2 {
+    margin: auto;
+    width: 70%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .boton{
