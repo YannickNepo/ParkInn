@@ -19,16 +19,16 @@
     line-height: 50px;
     font-weight: bold;
 }
-.contenedor-texto-Login{
+.contenedor-texto-login{
     margin-top: 35%;
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 70px;
 }
 
 .input-login1 {
     margin: auto;
-    width: 70%;
+    width: 110%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -37,7 +37,7 @@
 }
 .input-login2 {
     margin: auto;
-    width: 70%;
+    width: 110%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -46,7 +46,7 @@
 }
 
 .boton{
-    margin-top: 70px;
+    margin-top: 175px;
     display: flex;
     align-items: center;
     justify-content: center;

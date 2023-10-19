@@ -13,7 +13,7 @@ export default function RegisterPage(){
   return(
     <div className='contenedor-registrarse'>
       <div className='info'>
-        <h1 className='tituloR'>Crear cuenta
+        <h1 className='tituloR'>CREAR CUENTA
         </h1>
         <div className='contenedor-texto-Registrarse'>
             <input className='input-registrarse1' type='text' placeholder="Nombre de usuario"></input>

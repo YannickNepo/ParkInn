@@ -17,7 +17,9 @@ export default function LoginPage(){
        </h1>
         <div className='contenedor-texto-login'>
             <input className='input-login1'type='text' placeholder="Nombre de usuario"></input>
+         <div> 
           <input className='input-login2'type='password' placeholder="Contraseña"></input>
+          </div>
           <h5>No tienes cuenta? <Link to="/registrarse">Registrate</Link></h5>
         </div>
         <button type="button" className="boton" onClick={redirectToAnotherRoute}>
