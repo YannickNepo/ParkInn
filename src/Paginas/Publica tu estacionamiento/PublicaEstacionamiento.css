@@ -9,6 +9,7 @@
     text-align: center;
     color: red;
     position: absolute;
+    font-size: 35px;
 }
 .info{
     width: 100vh;
@@ -18,14 +19,19 @@
 }
 
 .contenedor-texto-PE{
-    margin-top: 15%;
+    margin-top: 20%;
     position: absolute;
     top: 230px;
-    left: 70px;
+    left: 35px;
+}
+.Dire{
+    top: 10px;
+    position: absolute;
+    width: 100vh;
 }
 .input-Direccion{
     margin: auto;
-    width: 80%;
+    width: 90%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -34,9 +40,9 @@
     margin: 30px;
 
 }
-.input-Barrio{
+.input-Capacidad{
     margin: auto;
-    width: 80%;
+    width: 90%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -44,9 +50,9 @@
     gap: 10px;
     margin: 30px;
 }
-.input-referencia{
+.input-Tipo{
     margin: auto;
-    width: 80%;
+    width: 90%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -59,4 +65,29 @@
     top: 25px;
     left: 60px;
     
+}
+.btn_logo{
+    border: none; 
+    outline: none;
+    background-color: white;
+}
+.botonPublicar{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius: 20px;
+    font-family: "Bold";
+    font-size: 28px;
+    width: 292px;
+    height: 50px;
+    margin-left: 55%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 320px;
+}
+.boton-texto{
+    color: white;
 }
