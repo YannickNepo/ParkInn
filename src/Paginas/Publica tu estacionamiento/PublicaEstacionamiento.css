@@ -25,9 +25,10 @@
     left: 35px;
 }
 .Dire{
-    top: 10px;
+    top: -13px;
     position: absolute;
     width: 100vh;
+    left: 30px;
 }
 .input-Direccion{
     margin: auto;
@@ -38,7 +39,12 @@
     display: block;
     gap: 10px;
     margin: 30px;
-
+}
+.Capacidad{
+    top: 67px;
+    position: absolute;
+    width: 100vh;
+    left: 30px;
 }
 .input-Capacidad{
     margin: auto;
@@ -49,6 +55,12 @@
     display: block;
     gap: 10px;
     margin: 30px;
+}
+.Tipo{
+    top: 144px;
+    position: absolute;
+    width: 100vh;
+    left: 30px;
 }
 .input-Tipo{
     margin: auto;

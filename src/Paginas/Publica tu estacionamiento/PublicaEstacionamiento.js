@@ -21,11 +21,13 @@ export default function PublicaEstacionamiento(){
         <h1 className='tituloPE'>Completa la siguiente informacion
         </h1>
         <div className='contenedor-texto-PE'>
-          <label className='Dire' Escribí tu direccion ></label>
-            <input className='input-Direccion' type='text' placeholder="Escribi tu direccion"></input>
-          <input className='input-Capacidad' type='number' placeholder="Capacidad del estacionamiento"></input>
+          <label className='Dire' >Seleccione su direccion</label>
+            <input className='input-Direccion' type='text' placeholder=""></input>
+            <label className='Capacidad' > Capacidad del estacionamiento</label>
+          <input className='input-Capacidad' type='number' placeholder=""></input>
           <div>
-            <input className='input-Tipo' type='text' placeholder="Descripcion"></input> 
+          <label className='Tipo' > Tipo del estacionamiento</label>
+            <input className='input-Tipo' type='text' placeholder="Por ejemplo: Techado"></input> 
           </div>
           <button type="button" className="botonPublicar" onClick={redirectToMenuInicio}>
           <p className="boton-texto">&nbsp;Publicar</p>

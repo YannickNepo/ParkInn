@@ -6,6 +6,7 @@ import Login from './Paginas/Login/Login'
 import Registrarse from './Paginas/Registrarse/Registrarse'
 import MenuInicio from './Paginas/MenuInicio/MenuInicio'
 import PublicaEstacionamiento from './Paginas/Publica tu estacionamiento/PublicaEstacionamiento';
+import MiPerfil from './Paginas/Mi perfil/MiPerfil';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/menuInicio" element={<MenuInicio />} />
         <Route path="/publicaestacionamiento" element={<PublicaEstacionamiento />} />
+        <Route path="/miperfil" element={<MiPerfil />} />
       </Routes>
     </Router> 
   );
