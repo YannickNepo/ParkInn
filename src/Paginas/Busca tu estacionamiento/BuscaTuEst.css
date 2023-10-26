@@ -1,0 +1,34 @@
+.contenedor-BE{
+    font-size: 20px;
+    height: 100vh;   
+}
+.info{
+    width: 100vh;
+    font-size: 100%;
+    line-height: 50px;
+    font-weight: bold;
+}
+.LogoBE {
+    position: relative;
+    top: 25px;
+    left: 60px;
+    
+}
+.contenedor-texto-BE{
+    margin-top: 20%;
+    position: absolute;
+    top: 230px;
+    left: 35px;
+}
+.tituloBE{
+    margin-top: 15%;
+    font-weight: 38px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    font-size: 35px;
+}
+.barrios{
+    position: absolute;
+    top: 100px;
+}

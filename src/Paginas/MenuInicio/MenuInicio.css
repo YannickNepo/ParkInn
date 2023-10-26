@@ -1,22 +1,28 @@
 .MenI{
     width: 100vh;
+    height: 100vh;
 }
 
 .BuscaEstacionamiento {
     position: relative;
-    top: 130px;
+    top: 95px;
     left: 8px;
     
 }
 .PublicaEstacionamiento {
     position: relative;
-    top: 175px;
+    top: 135px;
     left: 8px;
+}
+.LogoMI{
+    position: relative;
+    top: 30px;
+    left: 70px;
 }
 
 .MiPerfil {
     position: relative;
-    top: 210px;
+    top: 175px;
     left: 8px; 
 }
 .btn_BE{

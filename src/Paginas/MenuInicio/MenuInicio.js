@@ -4,6 +4,7 @@ import BtnBE from '../../assets/BuscaEst.PNG';
 import BtnPE from '../../assets/PublicaEst.PNG';
 import BtnMP from '../../assets/MiPerfil.PNG';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/proyecto.png';
 
 export default function MenIni(){
   const history = useNavigate();
@@ -21,6 +22,9 @@ export default function MenIni(){
 
   return(
     <div className='MenI'>
+      <div className="LogoMI" >
+      <img src={logo} alt="LogoPark" />
+     </div>
       <div className="BuscaEstacionamiento" >
       <button type="button" className="btn_BE" onClick={redirectToBuscaEstacionamiento}>
       <img src={BtnBE} alt="BotonBuscaEstacionamiento" />
