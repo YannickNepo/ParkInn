@@ -1,28 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-export default function LoginPage(){
+export default function LoginPage() {
   const history = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  const redirectToAnotherRoute = () => {
-    history('/MenuInicio');
+  const handleLogin = () => {
+    // Objeto con los datos a enviar
+    const loginData = {
+      username: username,
+      password: password
+    };
+    
+
+    // Realizar la solicitud fetch
+    fetch('https://fair-teal-clownfish.cyclic.app/LoginValidation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(loginData)
+    })
+      .then(response => {
+        // Manejar la respuesta del servidor
+        if (response.ok) {
+          // Hacer algo con la respuesta exitosa, por ejemplo, redirigir a otra página
+          alert("usuario encontrado");
+          history('/MenuInicio');
+        } else {
+          // Manejar el caso en el que la respuesta no es exitosa
+          alert('Error en la solicitud');
+        }
+      })
+      .catch(error => {
+        // Manejar errores de la solicitud
+        console.error('Error:', error);
+        // Podrías mostrar un mensaje de error al usuario, redirigirlo a una página de error, etc.
+      });
   };
 
-  return(
+  return (
     <div className='contenedor-login'>
       <div className='info'>
-       <h1 className='tituloL'>INICIO DE SESIÓN
-       </h1>
+        <h1 className='tituloL'>INICIO DE SESIÓN</h1>
         <div className='contenedor-texto-login'>
-            <input className='input-login1'type='text' placeholder="Nombre de usuario"></input>
-         <div> 
-          <input className='input-login2'type='password' placeholder="Contraseña"></input>
+          <input
+            className='input-login1'
+            type='text'
+            placeholder="Nombre de usuario"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          ></input>
+          <div>
+            <input
+              className='input-login2'
+              type='password'
+              placeholder="Contraseña"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
           </div>
           <h5>No tienes cuenta? <Link to="/registrarse">Registrate</Link></h5>
         </div>
-        <button type="button" className="boton" onClick={redirectToAnotherRoute}>
+        <button type="button" className="boton" onClick={handleLogin}>
           <p className="boton-texto">&nbsp;INICIAR SESION</p>
         </button>
       </div>

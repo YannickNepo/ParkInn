@@ -22,7 +22,7 @@ export default function BuscaEstacionamiento(){
         </h1>
         <div className='contenedor-texto-BE'>
           <label className='Barrio' >Seleccione su barrio</label>
-    <select name="barrios">
+    <select className="barrios">
         <option value="Palermo">Palermo</option>
         <option value="Belgrano">Belgrano</option>
         <option value="Nuñez">Nuñez</option>
