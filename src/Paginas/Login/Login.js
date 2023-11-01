@@ -9,15 +9,20 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
+    // Validar que el nombre de usuario y la contraseña no estén vacíos
+    if (!username || !password) {
+      alert('Por favor, introduce nombre de usuario y contraseña.');
+      return;
+    }
+
     // Objeto con los datos a enviar
     const loginData = {
       username: username,
       password: password
     };
     
-
     // Realizar la solicitud fetch
-    fetch('https://fair-teal-clownfish.cyclic.app/LoginValidation', {
+    fetch('https://fair-teal-clownfish.cyclic.app/loginValidation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
