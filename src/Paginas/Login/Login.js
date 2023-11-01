@@ -18,7 +18,7 @@ export default function LoginPage() {
     // Objeto con los datos a enviar
     const loginData = {
       username: username,
-      password: password
+      password: password 
     };
     
     // Realizar la solicitud fetch
@@ -32,12 +32,15 @@ export default function LoginPage() {
       .then(response => {
         // Manejar la respuesta del servidor
         if (response.ok) {
-          // Hacer algo con la respuesta exitosa, por ejemplo, redirigir a otra página
           alert("usuario encontrado");
           history('/MenuInicio');
         } else {
-          // Manejar el caso en el que la respuesta no es exitosa
-          alert('Error en la solicitud');
+          // Verificar si la respuesta indica credenciales inválidas
+          if (response.status === 401) {
+            alert('Nombre de usuario o contraseña incorrectos');
+          } else {
+            alert('Error en la solicitud');
+          }
         }
       })
       .catch(error => {
