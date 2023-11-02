@@ -29,7 +29,7 @@ export default function BuscaEstacionamiento(){
         <option value="Almagro">Almagro</option>
     </select> 
           <button type="button" className="botonPublicar" onClick={redirectToMenuInicio}>
-          <p className="boton-texto">&nbsp;Publicar</p>
+          <p className="boton-texto">&nbsp;Buscar</p>
         </button>
           
 
