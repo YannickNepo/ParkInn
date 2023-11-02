@@ -8,7 +8,8 @@ export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     // Validar que el nombre de usuario y la contraseña no estén vacíos
     if (!username || !password) {
       alert('Por favor, introduce nombre de usuario y contraseña.');
@@ -16,33 +17,34 @@ export default function LoginPage() {
     }
 
     // Objeto con los datos a enviar
-    const loginData = {
-      username: username,
-      password: password 
-    };
-    
     // Realizar la solicitud fetch
-    fetch('https://fair-teal-clownfish.cyclic.app/loginValidation', {
+    const busqueda = await fetch('https://fair-teal-clownfish.cyclic.app/loginValidation', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(loginData)
-    })
-      .then(response => {
-        // Manejar la respuesta del servidor
-        if (response.ok) {
-          alert("usuario encontrado");
-          history('/MenuInicio');
-        } else {
-          // Verificar si la respuesta indica credenciales inválidas
-          if (response.status === 401) {
-            alert('Nombre de usuario o contraseña incorrectos');
-          } else {
-            alert('Error en la solicitud');
-          }
-        }
+      body: JSON.stringify({
+        "username": username,
+        "password": password 
       })
+    })
+    .then(response => response.json())
+    .then(response =>{
+      if (!response.msg) {
+        alert("usuario encontrado");
+        history('/MenuInicio');
+      } else {
+        // Verificar si la respuesta indica credenciales inválidas
+        if (response.status === 401) {
+          alert('Nombre de usuario o contraseña incorrectos');
+        } else {
+          alert('Error en la solicitud');
+        }
+      }
+    })
+            // Manejar la respuesta del servidor
+
       .catch(error => {
         // Manejar errores de la solicitud
         console.error('Error:', error);
