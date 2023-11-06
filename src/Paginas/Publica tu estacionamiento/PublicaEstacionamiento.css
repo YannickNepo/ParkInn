@@ -88,15 +88,15 @@
     gap: 10px;
     margin: 30px;
 }
-.Fecha{
+.Fecha1{
     top: 300px;
     position: absolute;
     width: 100vh;
-    left: 30px;
+    left: 35px;
 }
-.input-Fecha{
+.input-Fecha1{
     margin: auto;
-    width: 90%;
+    width: 45%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -104,6 +104,26 @@
     gap: 10px;
     margin: 30px;
 }
+.Fecha2{
+    top: 300px;
+    position: absolute;
+    width: 100vh;
+    left: 195px;
+}
+.input-Fecha2{
+    margin: auto;
+    width: 45%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+    margin: 30px;
+    position: absolute;
+    top: 305px;
+    left: 155px;
+}
+
 .Foto{
     position: relative;
     top: -10px;

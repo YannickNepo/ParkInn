@@ -46,8 +46,10 @@ export default function PublicaEstacionamiento() {
           <div>
             <label className='Tipo'>Tipo del estacionamiento</label>
             <input className='input-Tipo' type='text' placeholder="Por ejemplo: Techado" />
-            <label className='Fecha'>Fechas</label>
-            <input className='input-Fecha' type='date' placeholder="" />
+            <label className='Fecha1'>Desde</label>
+            <input className='input-Fecha1' type='date' placeholder="" />
+            <label className='Fecha2'>Hasta</label>
+            <input className='input-Fecha2' type='date' placeholder="" />
           </div>
           <div>
             <input
@@ -60,17 +62,19 @@ export default function PublicaEstacionamiento() {
               <p>Por favor, elige una imagen</p>
             )}
             {previewImage && (
-              <img
-                className="preview-image"
-                src={previewImage}
-                alt="Preview"
-                style={{ maxWidth: '100%', maxHeight: '400px' }} // Ajusta el tamaño de la imagen para adaptarlo a la pantalla
-              />
+              <div>
+                <img
+                  className="preview-image"
+                  src={previewImage}
+                  alt="Preview"
+                  style={{ maxWidth: '100%', maxHeight: '400px' }} // Ajusta el tamaño de la imagen para adaptarlo a la pantalla
+                />
+              </div>
             )}
+            <button type="button" className="botonPublicar" onClick={handleFormSubmit}>
+              <p className="boton-texto">&nbsp;Publicar</p>
+            </button>
           </div>
-          <button type="button" className="botonPublicar" onClick={handleFormSubmit}>
-            <p className="boton-texto">&nbsp;Publicar</p>
-          </button>
         </div>
       </div>
     </div>
