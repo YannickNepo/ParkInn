@@ -30,10 +30,13 @@ export default function LoginPage() {
       })
     })
     .then(response => response.json())
-    .then(response =>{
-      if (!response.msg) {
-        alert("usuario encontrado");
-        history('/MenuInicio');
+  .then(response => {
+    if (!response.msg) {
+      alert("Usuario encontrado");
+      // Guardar los datos del usuario en localStorage
+      localStorage.setItem('userProfile', JSON.stringify(response)); // Almacena los datos del usuario
+      history('/MenuInicio');
+    
       } else {
         // Verificar si la respuesta indica credenciales inválidas
         if (response.status === 401) {

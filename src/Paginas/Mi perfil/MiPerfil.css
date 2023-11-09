@@ -1,0 +1,43 @@
+.contenedor-MP{
+    font-size: 20px;
+    height: 100vh;  
+}
+.perfil {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center; /* Alinea el texto al centro */
+  }
+  
+  .perfil h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .perfil p {
+    font-size: 16px;
+    margin: 5px 0; /* Reducir el margen vertical */
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+  }
+  
+  .perfil strong {
+    margin-right: 10px; /* Aumentar el margen derecho para separar los elementos */
+  }
+/* Estilos del contenedor */
+.botonCerrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centrar horizontalmente */
+    border-radius: 10px;
+    height: 40px;
+    padding: 10px 15px;
+    margin: 30px 1px;
+    width: 230px;
+    background-color: rgba(40, 123, 144, 1);
+    color: white;
+  }
+  

@@ -133,7 +133,12 @@
     position: absolute;
     top: 450px;
     left: 25px;
-}
+    width: 100%; /* Establecer un ancho fijo para mantener la consistencia */
+    padding: 8px;
+    margin: 6px 0;
+    box-sizing: border-box;
+      }
+
    
   
 .LogoPE {
