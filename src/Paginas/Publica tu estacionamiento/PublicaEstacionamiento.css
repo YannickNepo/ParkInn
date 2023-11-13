@@ -21,7 +21,7 @@
 .contenedor-texto-PE{
     margin-top: 20%;
     position: absolute;
-    top: 70px;
+    top: 110px;
     left: 35px;
 }
 .Dire{
@@ -96,7 +96,7 @@
 }
 .input-Fecha1{
     margin: auto;
-    width: 45%;
+    width: 48%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -112,7 +112,7 @@
 }
 .input-Fecha2{
     margin: auto;
-    width: 45%;
+    width: 48%;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
@@ -122,25 +122,7 @@
     position: absolute;
     top: 305px;
     left: 155px;
-}
-
-.Foto{
-    position: relative;
-    top: -10px;
-    left: 120px;
-}
-.input-Foto{
-    position: absolute;
-    top: 450px;
-    left: 25px;
-    width: 100%; /* Establecer un ancho fijo para mantener la consistencia */
-    padding: 8px;
-    margin: 6px 0;
-    box-sizing: border-box;
-      }
-
-   
-  
+}  
 .LogoPE {
     position: relative;
     top: 25px;
@@ -167,7 +149,7 @@
     margin-right: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 630px;
+    top: 500px;
 }
 .boton-texto{
     color: white;
