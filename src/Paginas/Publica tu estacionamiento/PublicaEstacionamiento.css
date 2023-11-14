@@ -154,3 +154,23 @@
 .boton-texto{
     color: white;
 }
+.BarrioPE{
+    top: 375px;
+    position: absolute;
+    width: 100vh;
+    left: 30px;
+  }
+
+
+.barriosPE{
+    margin: auto;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+    margin: 30px;
+    position: absolute;
+    top: 390px;
+    left: 20px;
+  }

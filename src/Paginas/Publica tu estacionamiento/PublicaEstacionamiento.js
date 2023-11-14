@@ -39,7 +39,9 @@ export default function PublicaEstacionamiento() {
       });
 
       if (response.ok) {
-        // El envío fue exitoso, redirige a la página deseada.
+        // El envío fue exitoso, guarda los datos en localStorage
+        localStorage.setItem('estacionamientoPublicado', JSON.stringify(formData));
+
         console.log('Datos enviados exitosamente');
         history('/MenuInicio');
       } else {
@@ -74,9 +76,16 @@ export default function PublicaEstacionamiento() {
               <label className='Fecha2'>Hasta</label>
               <input className='input-Fecha2' type='date' placeholder="" />
             </div>
-              <button type="submit" className="botonPublicar">
-                <p className="boton-texto">&nbsp;Publicar</p>
-              </button>
+            <label className='BarrioPE' >Seleccione su barrio</label>
+    <select className="barriosPE">
+        <option value="Palermo">Palermo</option>
+        <option value="Belgrano">Belgrano</option>
+        <option value="Nuñez">Nuñez</option>
+        <option value="Almagro">Almagro</option>
+    </select> 
+            <button type="submit" className="botonPublicar">
+              <p className="boton-texto">&nbsp;Publicar</p>
+            </button>
           </form>
         </div>
       </div>
