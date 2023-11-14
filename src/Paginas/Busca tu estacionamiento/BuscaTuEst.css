@@ -29,15 +29,62 @@
     position: absolute;
     font-size: 26px;
 }
-.barrios{
+.UbiActual{
+    top: 10px;
     position: absolute;
-    top: 25px;
-    width: 105%;
+    width: 100vh;
+    left: -10px;
+}
+.input-Ubi{
+    margin: auto;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
     display: block;
     gap: 10px;
     margin: 30px;
-    left: -33px;
+    position: absolute;
+    top: 20px;
+    left: -45px;
 }
+.Barrio{
+    top: 130px;
+    position: absolute;
+    width: 100vh;
+    left: 10px;
+  }
+
+
+.barrios{
+    margin: auto;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    gap: 10px;
+    margin: 30px;
+    position: absolute;
+    top: 145px;
+    left: 20px;
+  }
+
+  .botonBuscar{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius: 20px;
+    font-family: "Bold";
+    font-size: 28px;
+    width: 292px;
+    height: 50px;
+    margin-left: 54%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 300px;
+    left: 105px;
+  }
+  
+ 
