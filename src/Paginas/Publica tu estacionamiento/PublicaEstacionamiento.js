@@ -19,6 +19,7 @@ export default function PublicaEstacionamiento() {
     const tipo = document.querySelector('.input-Tipo').value;
     const fechaDesde = document.querySelector('.input-Fecha1').value;
     const fechaHasta = document.querySelector('.input-Fecha2').value;
+    const barrio = document.querySelector('.barriosPE').value; // Nuevo campo para el barrio
 
     const formData = {
       direccion,
@@ -27,6 +28,7 @@ export default function PublicaEstacionamiento() {
       tipo,
       fechaDesde,
       fechaHasta,
+      barrio,
     };
 
     try {
@@ -76,13 +78,13 @@ export default function PublicaEstacionamiento() {
               <label className='Fecha2'>Hasta</label>
               <input className='input-Fecha2' type='date' placeholder="" />
             </div>
-            <label className='BarrioPE' >Seleccione su barrio</label>
-    <select className="barriosPE">
-        <option value="Palermo">Palermo</option>
-        <option value="Belgrano">Belgrano</option>
-        <option value="Nuñez">Nuñez</option>
-        <option value="Almagro">Almagro</option>
-    </select> 
+            <label className='BarrioPE'>Seleccione su barrio</label>
+            <select className="barriosPE">
+              <option value="Palermo">Palermo</option>
+              <option value="Belgrano">Belgrano</option>
+              <option value="Nuñez">Nuñez</option>
+              <option value="Almagro">Almagro</option>
+            </select> 
             <button type="submit" className="botonPublicar">
               <p className="boton-texto">&nbsp;Publicar</p>
             </button>
