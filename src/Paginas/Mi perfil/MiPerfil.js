@@ -35,6 +35,7 @@ export default function MiPerfil() {
             <p><strong>Tipo:</strong> {estacionamientoPublicado.tipo}</p>
             <p><strong>Fecha Desde:</strong> {estacionamientoPublicado.fechaDesde}</p>
             <p><strong>Fecha Hasta:</strong> {estacionamientoPublicado.fechaHasta}</p>
+            <p><strong>Barrio:</strong> {estacionamientoPublicado.barrio}</p>
           </>
         )}
 

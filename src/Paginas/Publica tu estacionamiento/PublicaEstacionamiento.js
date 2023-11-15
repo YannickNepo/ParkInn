@@ -19,7 +19,7 @@ export default function PublicaEstacionamiento() {
     const tipo = document.querySelector('.input-Tipo').value;
     const fechaDesde = document.querySelector('.input-Fecha1').value;
     const fechaHasta = document.querySelector('.input-Fecha2').value;
-    const barrio = document.querySelector('.barriosPE').value; // Nuevo campo para el barrio
+    const barrio = document.querySelector('.barriosPE').value; 
 
     const formData = {
       direccion,
@@ -35,9 +35,17 @@ export default function PublicaEstacionamiento() {
       const response = await fetch('https://fair-teal-clownfish.cyclic.app/CreateParking', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          Accept: "application/json, text/plain, */*,",
+          "Content-Type": 'application/json'
         },
         body: JSON.stringify(formData),
+        "direccion":direccion,
+        "capacidad":capacidad,
+        "contacto":contacto,
+        "tipo":tipo,
+        "fechaDesde":fechaDesde,
+        "fechaHasta":fechaHasta,
+        "barrio":barrio
       });
 
       if (response.ok) {
