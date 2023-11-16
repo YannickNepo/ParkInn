@@ -2,9 +2,13 @@ import React from "react";
 import './MiPerfil.css';
 import logo from '../../assets/proyecto.png';
 import { useNavigate } from 'react-router-dom';
+import { useNameContext } from '../../App';
+
 
 export default function MiPerfil() {
   const history = useNavigate();
+  const { name } = useNameContext(); 
+
   const redirectToMenuInicio = () => {
     history('/MenuInicio');
   }
@@ -22,7 +26,7 @@ export default function MiPerfil() {
       </div>
       <div className='perfil'>
         <h2>Tu perfil</h2>
-        <p><strong>Nombre de usuario:</strong> {userProfile ? userProfile.username : 'N/A'}</p>
+        <p><strong>Nombre de usuario:</strong> {name}</p>
         <p><strong>Contraseña:</strong> {userProfile ? userProfile.password : 'N/A'}</p>
 
         {/* Mostrar datos del estacionamiento publicado */}

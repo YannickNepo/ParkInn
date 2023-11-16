@@ -2,12 +2,12 @@ import React from "react";
 import './PublicaEstacionamiento.css';
 import logo from '../../assets/proyecto.png';
 import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../../App';
 
 export default function PublicaEstacionamiento() {
   const history = useNavigate();
-  const userID = JSON.parse(localStorage.getItem('IDUsuario'));
-
-
+  // const userID = JSON.parse(localStorage.getItem('IDUsuario'));
+  const { userID } = useUserContext(); 
   const redirectToMenuInicio = () => {
     history('/MenuInicio');
   }
