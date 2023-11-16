@@ -34,6 +34,7 @@ export default function LoginPage() {
     if (!response.msg) {
       alert("Usuario encontrado");
       // Guardar los datos del usuario en localStorage
+      localStorage.setItem('IDUsuario', response.ID);
       localStorage.setItem('userProfile', JSON.stringify(response)); // Almacena los datos del usuario
       history('/MenuInicio');
     

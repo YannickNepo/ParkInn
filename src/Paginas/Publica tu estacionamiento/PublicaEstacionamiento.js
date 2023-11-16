@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function PublicaEstacionamiento() {
   const history = useNavigate();
+  const userID = JSON.parse(localStorage.getItem('IDUsuario'));
+
 
   const redirectToMenuInicio = () => {
     history('/MenuInicio');
@@ -20,16 +22,15 @@ export default function PublicaEstacionamiento() {
     const fechaDesde = document.querySelector('.input-Fecha1').value;
     const fechaHasta = document.querySelector('.input-Fecha2').value;
     const barrio = document.querySelector('.barriosPE').value; 
-
-    const formData = {
-      direccion,
-      capacidad,
-      contacto,
-      tipo,
-      fechaDesde,
-      fechaHasta,
-      barrio,
-    };
+    // const formData = {
+    //   direccion,
+    //   capacidad,
+    //   contacto,
+    //   tipo,
+    //   fechaDesde,
+    //   fechaHasta,
+    //   barrio,
+    // };
 
     try {
       const response = await fetch('https://fair-teal-clownfish.cyclic.app/CreateParking', {
@@ -38,20 +39,19 @@ export default function PublicaEstacionamiento() {
           Accept: "application/json, text/plain, */*,",
           "Content-Type": 'application/json'
         },
-        body: JSON.stringify(formData),
-        "direccion":direccion,
-        "capacidad":capacidad,
-        "contacto":contacto,
-        "tipo":tipo,
-        "fechaDesde":fechaDesde,
-        "fechaHasta":fechaHasta,
-        "barrio":barrio
+        body: JSON.stringify({
+        "adress":direccion,
+        "capacity":parseInt(capacidad),
+        "contact":contacto,
+        "type":tipo,
+        "userID": userID
+        // "fechaDesde":fechaDesde,
+        // "fechaHasta":fechaHasta,
+        // "barrio":barrio
+        })
       });
 
       if (response.ok) {
-        // El envío fue exitoso, guarda los datos en localStorage
-        localStorage.setItem('estacionamientoPublicado', JSON.stringify(formData));
-
         console.log('Datos enviados exitosamente');
         history('/MenuInicio');
       } else {
