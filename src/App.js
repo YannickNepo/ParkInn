@@ -12,21 +12,27 @@ import ResultadosBusqueda from './Paginas/Busca tu estacionamiento/ResultadosBus
 
 const UserContext = createContext();
 const NameDataContext = createContext();
+const PasswordDataContext = createContext();
 
 
 function App() {
 
   const [userID, setUserID] = useState(null); // Estado para almacenar el ID del usuario
   const [name, setName] = useState(null)
+  const [password, setPassword] = useState(null)
   const updateUserID = (newID) => {
     setUserID(newID);
   };
   const updateUserName = (name) => {
     setName(name);
   };
+  const updatePassword = (password) => {
+    setPassword(password);
+  };
   return (
     <UserContext.Provider value={{ userID, updateUserID }}>
     <NameDataContext.Provider value={{ name, updateUserName }}>
+    <PasswordDataContext.Provider value={{ password, updatePassword }}> 
     <Router>
       <Routes>
         <Route path="/" element={<PaginaInicio />} />
@@ -39,8 +45,10 @@ function App() {
         <Route path="/resultadobusqueda" element={<ResultadosBusqueda />} />
       </Routes>
     </Router> 
+    </PasswordDataContext.Provider>
     </NameDataContext.Provider>
     </UserContext.Provider>
+    
   );
 }
 
@@ -50,6 +58,9 @@ export const useUserContext = () => {
 
 export const useNameContext = () => {
   return useContext(NameDataContext);
+};
+export const usePasswordContext = () => {
+  return useContext(PasswordDataContext);
 };
 
 export default App;

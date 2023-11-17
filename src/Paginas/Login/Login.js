@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useUserContext, useNameContext } from '../../App';
+import { useUserContext, useNameContext, usePasswordContext } from '../../App';
+
 
 export default function LoginPage() {
   const { updateUserID } = useUserContext();
   const  { updateUserName } = useNameContext();
+  const { updatePassword} = usePasswordContext();
   const history = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -39,6 +41,8 @@ export default function LoginPage() {
       // Guardar los datos del usuario en localStorage
       updateUserID(response.ID);
       updateUserName(response.username)
+      updatePassword(response.password)
+    
 
       // localStorage.setItem('IDUsuario', response.ID);
       // localStorage.setItem('userProfile', JSON.stringify(response)); // Almacena los datos del usuario

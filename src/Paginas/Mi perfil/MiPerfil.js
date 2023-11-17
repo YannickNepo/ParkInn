@@ -2,12 +2,16 @@ import React from "react";
 import './MiPerfil.css';
 import logo from '../../assets/proyecto.png';
 import { useNavigate } from 'react-router-dom';
-import { useNameContext } from '../../App';
+import { useNameContext, usePasswordContext, useUserContext } from '../../App';
+import {  } from "../../App";
 
 
 export default function MiPerfil() {
   const history = useNavigate();
-  const { name } = useNameContext(); 
+  const { name, updateUserName } = useNameContext(); 
+  const {password, updatePassword} = usePasswordContext();
+  const { userID, updateUserID } = useUserContext();
+  
 
   const redirectToMenuInicio = () => {
     history('/MenuInicio');
@@ -27,7 +31,7 @@ export default function MiPerfil() {
       <div className='perfil'>
         <h2>Tu perfil</h2>
         <p><strong>Nombre de usuario:</strong> {name}</p>
-        <p><strong>Contraseña:</strong> {userProfile ? userProfile.password : 'N/A'}</p>
+        <p><strong>Contraseña:</strong> {password}</p>
 
         {/* Mostrar datos del estacionamiento publicado */}
         {estacionamientoPublicado && (
@@ -44,8 +48,9 @@ export default function MiPerfil() {
         )}
 
         <button className="botonCerrar" onClick={() => {
-          localStorage.removeItem('userProfile');
-          localStorage.removeItem('estacionamientoPublicado');
+          updatePassword(null);
+          updateUserID(null);
+          updateUserName(null);
           history('/');
         }}>
           Cerrar Sesión
