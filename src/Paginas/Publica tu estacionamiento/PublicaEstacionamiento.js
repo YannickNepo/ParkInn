@@ -54,6 +54,9 @@ export default function PublicaEstacionamiento() {
       if (response.ok) {
         console.log('Datos enviados exitosamente');
         history('/MenuInicio');
+
+        
+
       } else {
         console.error('Error al enviar los datos al servidor');
       }

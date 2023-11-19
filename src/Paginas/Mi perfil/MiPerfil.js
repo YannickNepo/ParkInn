@@ -33,19 +33,6 @@ export default function MiPerfil() {
         <p><strong>Nombre de usuario:</strong> {name}</p>
         <p><strong>Contraseña:</strong> {password}</p>
 
-        {/* Mostrar datos del estacionamiento publicado */}
-        {estacionamientoPublicado && (
-          <>
-            <h2>Estacionamiento Publicado</h2>
-            <p><strong>Dirección:</strong> {estacionamientoPublicado.direccion}</p>
-            <p><strong>Capacidad:</strong> {estacionamientoPublicado.capacidad}</p>
-            <p><strong>Contacto:</strong> {estacionamientoPublicado.contacto}</p>
-            <p><strong>Tipo:</strong> {estacionamientoPublicado.tipo}</p>
-            <p><strong>Fecha Desde:</strong> {estacionamientoPublicado.fechaDesde}</p>
-            <p><strong>Fecha Hasta:</strong> {estacionamientoPublicado.fechaHasta}</p>
-            <p><strong>Barrio:</strong> {estacionamientoPublicado.barrio}</p>
-          </>
-        )}
 
         <button className="botonCerrar" onClick={() => {
           updatePassword(null);
