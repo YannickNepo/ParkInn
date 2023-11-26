@@ -49,6 +49,29 @@ export default function MiPerfil() {
     }
   }, [userID]);
 
+  const handleDelete = async (estacionamientoID) => {
+    try {
+      const response = await fetch('https://fair-teal-clownfish.cyclic.app/DeletePark', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: estacionamientoID })
+      });
+
+      if (response.ok) {
+        // Eliminar el estacionamiento de la lista localmente
+        const updatedEstacionamientos = estacionamientos.filter(est => est.ID !== estacionamientoID);
+        setEstacionamientos(updatedEstacionamientos);
+        console.log(`Estacionamiento con ID ${estacionamientoID} eliminado exitosamente`);
+      } else {
+        console.error(`Error al intentar eliminar el estacionamiento con ID ${estacionamientoID}`);
+      }
+    } catch (error) {
+      console.error('Error al realizar la solicitud:', error);
+    }
+  };
+
   return (
     <div className='contenedor-MP'>
       <div className="LogoPE">
@@ -71,6 +94,7 @@ export default function MiPerfil() {
                 <p><strong>Capacidad:</strong> {estacionamiento.capacity}</p>
                 <p><strong>Contacto:</strong> {estacionamiento.contact}</p>
                 <p><strong>Barrio:</strong> {estacionamiento.barrio}</p>
+                <button className="delete" onClick={() => handleDelete(estacionamiento.ID)}>Borrar</button>
               </li>
             ))}
           </ul>

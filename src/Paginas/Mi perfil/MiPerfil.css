@@ -42,3 +42,13 @@
   background-color: rgba(40, 123, 144, 1);
   color: white;
 }
+.delete{
+  border-radius: 10px;
+  height: 40px;
+  padding: 10px 15px;
+  margin: 30px 0;
+  width: 150px;
+  background-color:red;
+  color: white;
+
+}
