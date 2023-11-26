@@ -44,7 +44,8 @@ export default function PublicaEstacionamiento() {
         "capacity":parseInt(capacidad),
         "contact":contacto,
         "type":tipo,
-        "userID": userID
+        "userID": userID,
+        "barrio":barrio
         // "fechaDesde":fechaDesde,
         // "fechaHasta":fechaHasta,
         // "barrio":barrio

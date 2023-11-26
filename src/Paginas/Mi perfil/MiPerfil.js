@@ -1,29 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './MiPerfil.css';
 import logo from '../../assets/proyecto.png';
 import { useNavigate } from 'react-router-dom';
 import { useNameContext, usePasswordContext, useUserContext } from '../../App';
-import {  } from "../../App";
-
 
 export default function MiPerfil() {
   const history = useNavigate();
   const { name, updateUserName } = useNameContext(); 
-  const {password, updatePassword} = usePasswordContext();
+  const { password, updatePassword } = usePasswordContext();
   const { userID, updateUserID } = useUserContext();
-  
+  const [estacionamientos, setEstacionamientos] = useState([]);
 
   const redirectToMenuInicio = () => {
     history('/MenuInicio');
   }
 
-  // Obtener los datos del usuario desde localStorage
-  const userProfile = JSON.parse(localStorage.getItem('userProfile'));
-  const estacionamientoPublicado = JSON.parse(localStorage.getItem('estacionamientoPublicado'));
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://fair-teal-clownfish.cyclic.app/GetParkUser', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ userID: userID })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          // Si recibes datos de estacionamientos, actualiza el estado
+          if (data && data.length > 0) {
+            setEstacionamientos(data);
+          } else {
+            // Si no hay estacionamientos, muestra un mensaje
+            setEstacionamientos([]);
+          }
+        } else {
+          // Manejar el caso de error de la solicitud
+          console.error('Error al obtener los estacionamientos');
+        }
+      } catch (error) {
+        console.error('Error al procesar la solicitud:', error);
+      }
+    };
+
+    if (userID) {
+      fetchData();
+    }
+  }, [userID]);
 
   return (
     <div className='contenedor-MP'>
-      <div className="LogoPE" >
+      <div className="LogoPE">
         <button type="button" className="btn_logo" onClick={redirectToMenuInicio}>
           <img src={logo} alt="Botonlogo" />
         </button>
@@ -33,6 +61,22 @@ export default function MiPerfil() {
         <p><strong>Nombre de usuario:</strong> {name}</p>
         <p><strong>Contraseña:</strong> {password}</p>
 
+        <h3>Estacionamientos:</h3>
+        {estacionamientos.length > 0 ? (
+          <ul>
+            {estacionamientos.map((estacionamiento) => (
+              <li key={estacionamiento.ID}>
+                <p><strong>Dirección:</strong> {estacionamiento.adress}</p>
+                <p><strong>Tipo:</strong> {estacionamiento.type}</p>
+                <p><strong>Capacidad:</strong> {estacionamiento.capacity}</p>
+                <p><strong>Contacto:</strong> {estacionamiento.contact}</p>
+                <p><strong>Barrio:</strong> {estacionamiento.barrio}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No has publicado ningún estacionamiento.</p>
+        )}
 
         <button className="botonCerrar" onClick={() => {
           updatePassword(null);

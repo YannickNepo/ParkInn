@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function Resultados() {
   const location = useLocation();
-  const { estacionamientos } = location.state;
+  const { estacionamientos } = location.state || { estacionamientos: [] };
 
   return (
     <div>
@@ -15,9 +15,7 @@ export default function Resultados() {
               <h2>Estacionamiento {index + 1}</h2>
               <p><strong>Dirección:</strong> {estacionamiento.direccion}</p>
               <p><strong>Capacidad:</strong> {estacionamiento.capacidad}</p>
-              <p><strong>Contacto:</strong> {estacionamiento.contacto}</p>
-              <p><strong>Tipo:</strong> {estacionamiento.tipo}</p>
-              {/* Añade aquí los demás datos que desees mostrar */}
+              {/* Agrega aquí los demás datos que desees mostrar */}
             </li>
           ))}
         </ul>
