@@ -49,7 +49,7 @@ export default function BuscaEstacionamiento() {
         {mostrarTitulos && ( // Mostrar títulos solo si mostrarTitulos es verdadero
           <div>
             <h1 className='tituloBE'>Busca estacionamiento por tu zona</h1>
-            <h2>Estacionamientos encontrados:</h2>
+            
           </div>
         )}
         {!mostrarResultados && (
@@ -85,7 +85,7 @@ export default function BuscaEstacionamiento() {
                 ))}
               </ul>
             ) : (
-              <p>No se encontraron estacionamientos con los criterios seleccionados.</p>
+              <p>No se encontraron estacionamientos.</p>
             )}
           </div>
         )}
